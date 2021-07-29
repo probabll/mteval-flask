@@ -24,8 +24,10 @@ def compute_scores():
 
 def handle_POST(func):
     """
-    Handles POST requests where the body of the request is JSON where one of the keys is "q". E.g. {"q": "hello world"}
-    :param func. A function that takes a translation model, a string and a logger object and returns a python dictionary.
+    Handles POST requests where the body of the request is JSON with keys 
+        'hyps', 'refs', and 'srcs'.
+    For example, {"hyps": ["hello world"], "refs": ["Hello, world!"], "srcs": ["Ola, mundo."]}
+    :param func. The integration function.
     """
     payload = request.json
     if not payload:
