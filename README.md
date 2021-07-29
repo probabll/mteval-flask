@@ -35,6 +35,19 @@ You can pass arguments to COMET, such as `cuda` support and `modelname`:
 
 5. Make requests
 
+Via command line:
+
 ```bash
 curl -X POST -d '{"hyps": ["A", "hello world!"], "refs": ["A", "Hello, World!"], "srcs": ["a", "Ola, mundo!"]}' -H "Content-Type: application/json" -v localhost:4000/score
+```
+
+Or programmatically (e.g., in python):
+
+```python
+import requests
+
+jobs = {'hyps': ['A', 'B'], 'refs': ['A', 'B'], 'srcs': ['a', 'b']}
+results = requests.post("http://localhost:4000/score", json=jobs, headers={'Content-Type': 'application/json'}).json()
+
+print(results)
 ```
