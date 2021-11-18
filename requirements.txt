@@ -1,2 +1,2 @@
 Flask
-mt-telescope==0.0.1rc1
+unbabel-comet==1.0.0rc9

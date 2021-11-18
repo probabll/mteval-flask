@@ -11,14 +11,7 @@ source metrics-venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Download models (e.g., COMET models)
-
-```python
-import COMET
-comet = COMET(modelname="wmt21-small-da-152012")
-```
-
-4. Start the app
+3. Start the app
 
 For example, with COMET:
 
@@ -29,7 +22,7 @@ For example, with COMET:
 You can pass arguments to COMET, such as `cuda` support and `modelname`:
 
 ```bash
- python app.py comet:cuda=true:modelname=wmt21-small-da-152012
+ python app.py cometinho:cuda=true:modelname=wmt21-cometinho-da
 ```
 
 
